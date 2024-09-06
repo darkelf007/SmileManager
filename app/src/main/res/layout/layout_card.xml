@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_62"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ID"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_14"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="ID"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_11"  />
+
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_14"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="date"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_11" />
+
+
+            <TextView
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_14"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="order"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/dentist"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_14"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="dentist"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_11" />
+        <TextView
+            android:id="@+id/patience"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_14"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="patience"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/date_expiration"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_14"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="date_expiration"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/text_size_11" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmileManager</string>
+    <string name="list">Наряды</string>
+    <string name="report">Отчеты</string>
+    <string name="guide">Справочник</string>
+    <string name="settings">Настройки</string>
+</resources>
