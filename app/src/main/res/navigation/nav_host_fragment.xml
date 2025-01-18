@@ -9,7 +9,14 @@
         android:id="@+id/listFragment"
         android:name="com.anaraliev.smilemanager.list.presentation.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_newOrderFragment"
+            app:destination="@id/newOrderFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reportFragment"
         android:name="com.anaraliev.smilemanager.report.ReportFragment"
@@ -25,5 +32,15 @@
         android:name="com.anaraliev.smilemanager.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.anaraliev.smilemanager.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/newOrderFragment"
+        android:name="com.anaraliev.smilemanager.NewOrderFragment"
+        android:label="fragment_new_order"
+        tools:layout="@layout/fragment_new_order" />
 
 </navigation>
