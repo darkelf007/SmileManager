@@ -1,4 +1,4 @@
-package com.android.playlistmaker.di
+package com.anaraliev.smilemanager.di
 
 
 import com.anaraliev.smilemanager.main.domain.MainInteractor

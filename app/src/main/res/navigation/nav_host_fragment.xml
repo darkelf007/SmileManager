@@ -34,12 +34,12 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/editFragment"
-        android:name="com.anaraliev.smilemanager.EditFragment"
+        android:name="com.anaraliev.smilemanager.editOrder.EditFragment"
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit" />
     <fragment
         android:id="@+id/newOrderFragment"
-        android:name="com.anaraliev.smilemanager.NewOrderFragment"
+        android:name="com.anaraliev.smilemanager.newOrder.NewOrderFragment"
         android:label="fragment_new_order"
         tools:layout="@layout/fragment_new_order" />
 

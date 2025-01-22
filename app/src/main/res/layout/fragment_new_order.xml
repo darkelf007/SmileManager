@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewOrderFragment">
+    android:orientation="vertical"
+    tools:context=".newOrder.NewOrderFragment">
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_customer"
+        android:layout_marginTop="@dimen/dp_4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"  />
 
-</FrameLayout>
+    <Spinner
+        android:id="@+id/spinner_doctor"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_customer"  />
+
+    <Spinner
+        android:id="@+id/spinner_patient"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_doctor"  />
+
+
+    <ImageView
+        android:id="@+id/teeth_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_patient"
+        android:visibility="visible"
+        tools:src="@drawable/teeth_table" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_work_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/teeth_img"
+/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

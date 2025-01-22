@@ -1,4 +1,4 @@
-package com.anaraliev.smilemanager.report
+package com.anaraliev.smilemanager.guide.tasks
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -8,15 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.anaraliev.smilemanager.R
 
-class ReportFragment : Fragment() {
+class TasksFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ReportFragment()
+        fun newInstance() = TasksFragment()
     }
 
-    private val viewModel: ReportViewModel by viewModels()
+    private val viewModel: TasksViewModel by viewModels()
 
-    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,6 +26,6 @@ class ReportFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_report, container, false)
+        return inflater.inflate(R.layout.fragment_tasks, container, false)
     }
 }

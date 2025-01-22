@@ -1,111 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_62"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/dp_8"
+    android:background="?attr/selectableItemBackground"> <!-- Добавляем ripple-эффект для кликабельности -->
 
-
-    <LinearLayout
+    <!-- Столбец 1: ID -->
+    <TextView
+        android:id="@+id/ID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="12345" />
 
-        <TextView
-            android:id="@+id/ID"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_14"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/dark_grey"
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
 
-            android:textSize="@dimen/text_size_11"
-            tools:text="ID" />
+    <!-- Столбец 2: Дата -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="2023-10-01" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/separate" />
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
 
+    <!-- Столбец 3: Заказ -->
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="Заказ #123" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_14"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/dark_grey"
-            android:textSize="@dimen/text_size_11"
-            tools:text="date" />
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/separate" />
+    <!-- Столбец 4: Дантист -->
+    <TextView
+        android:id="@+id/dentist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="Иванов И." />
 
-        <TextView
-            android:id="@+id/order"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_14"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/dark_grey"
-            android:textSize="@dimen/text_size_11"
-            tools:text="order" />
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/separate" />
+    <!-- Столбец 5: Пациент -->
+    <TextView
+        android:id="@+id/patience"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="Петров П." />
 
-        <TextView
-            android:id="@+id/dentist"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_14"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/dark_grey"
-            android:textSize="@dimen/text_size_11"
-            tools:text="dentist" />
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
 
-        <ImageView
-            android:id="@+id/imageVie4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/separate" />
-
-        <TextView
-            android:id="@+id/patience"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_14"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/dark_grey"
-            android:textSize="@dimen/text_size_11"
-            tools:text="patience" />
-
-        <ImageView
-            android:id="@+id/imageVie5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/separate" />
-
-        <TextView
-            android:id="@+id/date_expiration"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp_14"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/dark_grey"
-            android:textSize="@dimen/text_size_11"
-            tools:text="date_expiration" />
-
-    </LinearLayout>
-
+    <!-- Столбец 6: Срок действия -->
+    <TextView
+        android:id="@+id/date_expiration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="2023-12-31" />
 
 </LinearLayout>
