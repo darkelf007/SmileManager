@@ -1,4 +1,4 @@
-package com.anaraliev.smilemanager.newOrder
+package com.anaraliev.smilemanager.list.newOrder
 
 import android.os.Bundle
 import android.view.LayoutInflater

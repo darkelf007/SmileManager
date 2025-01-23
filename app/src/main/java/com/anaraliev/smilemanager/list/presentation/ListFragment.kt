@@ -51,7 +51,7 @@ class ListFragment : Fragment() {
             ItemData("123", "2023-08-25", "A123", "Dr. Smith", "John Doe", "2024-08-25"),
             ItemData("123", "2023-08-25", "A123", "Dr. Smith", "John Doe", "2024-08-25"),
             ItemData("123", "2023-08-25", "A123", "Dr. Smith", "John Doe", "2024-08-25"),
-            ItemData("124", "2023-08-26", "A124", "Dr. Doe", "Jane Doe", "2024-08-26")
+            ItemData("124", "2023-08-26", "A124", "Dr. Smith", "Jane Doe", "2024-08-26")
         )
 
         adapter = MyListAdapter(dataList)

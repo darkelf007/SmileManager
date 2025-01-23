@@ -1,4 +1,4 @@
-package com.anaraliev.smilemanager.newOrder
+package com.anaraliev.smilemanager.list.newOrder
 
 import androidx.lifecycle.ViewModel
 

@@ -1,13 +1,15 @@
 package com.anaraliev.smilemanager.guide
 
-import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.anaraliev.smilemanager.R
 import com.anaraliev.smilemanager.databinding.FragmentGuideBinding
+import com.anaraliev.smilemanager.utils.REQUEST_KEY
 import com.google.android.material.tabs.TabLayoutMediator
 
 class GuideFragment : Fragment() {
@@ -26,8 +28,12 @@ class GuideFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        childFragmentManager.setFragmentResultListener(REQUEST_KEY, this) { _, _ ->
+            val navController = requireActivity().findNavController(R.id.nav_host_fragment)
+            navController.navigate(R.id.action_guideFragment_to_newCustomerFragment)
+        }
 
-        val adapter = GuidePagerAdapter(requireActivity())
+        val adapter = GuidePagerAdapter(this)
         binding.viewPager.adapter = adapter
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
