@@ -57,11 +57,7 @@
         android:id="@+id/customerFragment"
         android:name="com.anaraliev.smilemanager.guide.customer.CustomerFragment"
         android:label="fragment_customer"
-        tools:layout="@layout/fragment_customer" >
-        <action
-            android:id="@+id/action_customerFragment_to_newCustomerFragment"
-            app:destination="@id/newCustomerFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_customer" />
     <fragment
         android:id="@+id/doctorFragment"
         android:name="com.anaraliev.smilemanager.guide.doctor.DoctorFragment"

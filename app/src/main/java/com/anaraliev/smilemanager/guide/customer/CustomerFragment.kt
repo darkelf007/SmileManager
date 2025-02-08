@@ -8,7 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.anaraliev.smilemanager.R
-import com.anaraliev.smilemanager.utils.REQUEST_KEY
+import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_CUSTOMER
 
 class CustomerFragment : Fragment() {
 
@@ -26,7 +26,7 @@ class CustomerFragment : Fragment() {
 
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_customer)
         buttonNewCustomer.setOnClickListener {
-            parentFragmentManager.setFragmentResult(REQUEST_KEY, Bundle())
+            parentFragmentManager.setFragmentResult(REQUEST_KEY_NEW_CUSTOMER, Bundle())
         }
     }
 
