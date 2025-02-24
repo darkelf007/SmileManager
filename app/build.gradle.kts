@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp") version "2.1.0-1.0.29"
 }
 
 android {
@@ -41,13 +42,19 @@ android {
 }
 
 dependencies {
-    implementation ("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
-    implementation("androidx.fragment:fragment-ktx:1.8.2")
-    implementation("io.insert-koin:koin-android:3.5.6")
-    implementation("io.insert-koin:koin-core:3.5.6")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:$room_version")
+
+    implementation ("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.7")
+    implementation("androidx.fragment:fragment-ktx:1.8.6")
+    implementation("io.insert-koin:koin-android:4.0.0")
+    implementation("io.insert-koin:koin-core:4.0.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
