@@ -1,17 +1,17 @@
-package com.anaraliev.smilemanager.guide.customer.new_customer
+package com.anaraliev.smilemanager.guide.customer.new_customer.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.anaraliev.smilemanager.databinding.FragmentNewCustomerBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class NewCustomerFragment : Fragment() {
 
-    private val viewModel: NewCustomerViewModel by viewModels()
+    private val viewModel: NewCustomerViewModel by viewModel()
 
     private var _binding: FragmentNewCustomerBinding? = null
     private val binding get() = _binding!!
@@ -27,10 +27,28 @@ class NewCustomerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupListeners()
+    }
+
+    private fun setupListeners() {
         binding.backButton.setOnClickListener {
             findNavController().navigateUp()
         }
 
+        binding.buttonOk.setOnClickListener {
+            saveCustomer()
+        }
+    }
+
+    private fun saveCustomer() {
+        val name = binding.editTextCustomer.text.toString().trim()
+
+        if (name.isNotEmpty()) {
+            viewModel.addCustomer(name)
+            findNavController().navigateUp()
+        } else {
+            binding.editTextCustomer.error = "Введите название"
+        }
     }
 
     override fun onDestroyView() {

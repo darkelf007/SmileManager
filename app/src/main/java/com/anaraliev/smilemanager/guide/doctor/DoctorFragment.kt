@@ -25,7 +25,7 @@ class DoctorFragment : Fragment() {
 
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_doctor)
         buttonNewCustomer.setOnClickListener {
-            parentFragmentManager.setFragmentResult(REQUEST_KEY_NEW_DOCTOR, Bundle())
+            requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_NEW_DOCTOR, Bundle())
         }
 
     }

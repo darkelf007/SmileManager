@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.anaraliev.smilemanager"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.anaraliev.smilemanager"
@@ -42,11 +42,10 @@ android {
 }
 
 dependencies {
-    val room_version = "2.6.1"
 
-    implementation("androidx.room:room-runtime:$room_version")
-    ksp("androidx.room:room-compiler:$room_version")
-    implementation("androidx.room:$room_version")
+    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 
     implementation ("androidx.recyclerview:recyclerview:1.4.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.7")

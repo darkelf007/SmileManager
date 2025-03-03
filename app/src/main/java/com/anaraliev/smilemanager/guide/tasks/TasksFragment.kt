@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.anaraliev.smilemanager.R
-import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_DOCTOR
 import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_TASK
 
 class TasksFragment : Fragment() {
@@ -28,7 +27,7 @@ class TasksFragment : Fragment() {
 
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_task)
         buttonNewCustomer.setOnClickListener {
-            parentFragmentManager.setFragmentResult(REQUEST_KEY_NEW_TASK, Bundle())
+            requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_NEW_TASK, Bundle())
         }
 
     }

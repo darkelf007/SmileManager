@@ -26,7 +26,7 @@ class CustomerFragment : Fragment() {
 
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_customer)
         buttonNewCustomer.setOnClickListener {
-            parentFragmentManager.setFragmentResult(REQUEST_KEY_NEW_CUSTOMER, Bundle())
+            requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_NEW_CUSTOMER, Bundle())
         }
     }
 

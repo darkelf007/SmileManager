@@ -1,4 +1,4 @@
-package com.anaraliev.smilemanager.di
+  package com.anaraliev.smilemanager.di
 
 import org.koin.dsl.module
 
