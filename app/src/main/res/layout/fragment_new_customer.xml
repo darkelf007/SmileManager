@@ -9,7 +9,7 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout_header"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="1dp"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Заказчик"
@@ -41,18 +41,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout_customer"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginEnd="1dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_header">
 
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView_customer_body"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Заказчик"
@@ -68,13 +68,13 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_customer">
 
 
         <TextView
@@ -101,7 +101,7 @@
         android:layout_marginEnd="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_comments">
 
 
         <TextView
@@ -122,7 +122,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout5"
+        android:id="@+id/linearLayout_email"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginEnd="1dp"
@@ -132,7 +132,7 @@
 
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textView_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -140,7 +140,7 @@
             android:textSize="@dimen/text_size_22" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/editText_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -149,17 +149,17 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout_percentage_body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_email">
 
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView_percentage_discounts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -167,23 +167,23 @@
             android:textSize="@dimen/text_size_22" />
 
         <LinearLayout
-            android:id="@+id/linearLayout7"
+            android:id="@+id/linearLayout_percentage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="1dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_email">
 
             <EditText
-                android:id="@+id/editTextText5"
+                android:id="@+id/editText_percentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textView_percentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

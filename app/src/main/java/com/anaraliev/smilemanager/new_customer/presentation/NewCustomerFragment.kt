@@ -47,7 +47,18 @@ class NewCustomerFragment : Fragment() {
             viewModel.addCustomer(name)
             findNavController().navigateUp()
         } else {
-            binding.editTextCustomer.error = "Введите название"
+            binding.editTextCustomer.error = "Введите заказчика"
+        }
+    }
+
+    private fun saveComments() {
+        val name = binding.editTextCustomer.text.toString().trim()
+
+        if (name.isNotEmpty()) {
+            viewModel.addCustomer(name)
+            findNavController().navigateUp()
+        } else {
+            binding.editTextCustomer.error = "Введите заказчика"
         }
     }
 
