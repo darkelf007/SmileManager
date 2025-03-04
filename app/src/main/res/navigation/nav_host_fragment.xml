@@ -50,37 +50,37 @@
         tools:layout="@layout/fragment_edit" />
     <fragment
         android:id="@+id/newOrderFragment"
-        android:name="com.anaraliev.smilemanager.list.newOrder.NewOrderFragment"
+        android:name="com.anaraliev.smilemanager.newOrder.NewOrderFragment"
         android:label="fragment_new_order"
         tools:layout="@layout/fragment_new_order" />
     <fragment
         android:id="@+id/customerFragment"
-        android:name="com.anaraliev.smilemanager.guide.customer.CustomerFragment"
+        android:name="com.anaraliev.smilemanager.customer.CustomerFragment"
         android:label="fragment_customer"
         tools:layout="@layout/fragment_customer" />
     <fragment
         android:id="@+id/doctorFragment"
-        android:name="com.anaraliev.smilemanager.guide.doctor.DoctorFragment"
+        android:name="com.anaraliev.smilemanager.doctor.DoctorFragment"
         android:label="fragment_doctor"
         tools:layout="@layout/fragment_doctor" />
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.anaraliev.smilemanager.guide.tasks.TasksFragment"
+        android:name="com.anaraliev.smilemanager.tasks.TasksFragment"
         android:label="fragment_tasks"
         tools:layout="@layout/fragment_tasks" />
     <fragment
         android:id="@+id/newCustomerFragment"
-        android:name="com.anaraliev.smilemanager.guide.customer.new_customer.presentation.NewCustomerFragment"
+        android:name="com.anaraliev.smilemanager.new_customer.presentation.NewCustomerFragment"
         android:label="fragment_new_customer"
         tools:layout="@layout/fragment_new_customer" />
     <fragment
         android:id="@+id/newDoctorFragment"
-        android:name="com.anaraliev.smilemanager.guide.doctor.new_doctor.NewDoctorFragment"
+        android:name="com.anaraliev.smilemanager.new_doctor.NewDoctorFragment"
         android:label="fragment_new_doctor"
         tools:layout="@layout/fragment_new_doctor" />
     <fragment
         android:id="@+id/newTaskFragment"
-        android:name="com.anaraliev.smilemanager.guide.tasks.new_task.NewTaskFragment"
+        android:name="com.anaraliev.smilemanager.new_task.NewTaskFragment"
         android:label="fragment_new_task"
         tools:layout="@layout/fragment_new_task" />
 

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/dp_8"
+    android:background="?attr/selectableItemBackground"> <!-- Добавляем ripple-эффект для кликабельности -->
+
+
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
+
+    <!-- Столбец 2: Дата -->
+    <TextView
+        android:id="@+id/customer_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="customer_name" />
+
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
+
+    <!-- Столбец 3: Заказ -->
+    <TextView
+        android:id="@+id/contact_number_comments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="contact_number_comments" />
+
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
+
+    <!-- Столбец 4: Дантист -->
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="address" />
+
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
+
+    <!-- Столбец 5: Пациент -->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="email" />
+
+    <!-- Разделитель -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey" />
+
+    <!-- Столбец 6: Срок действия -->
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/text_size_11"
+        tools:text="percentage" />
+
+</LinearLayout>

@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import com.anaraliev.smilemanager.database.dao.CustomerEntityDAO
 import com.anaraliev.smilemanager.database.entity.CustomerEntity
 
-@Database(entities = [CustomerEntity::class], version = 5)
+@Database(entities = [CustomerEntity::class], version = 8)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun customerEntityDAO(): CustomerEntityDAO
 }

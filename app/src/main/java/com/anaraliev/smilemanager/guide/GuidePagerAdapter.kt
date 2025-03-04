@@ -2,9 +2,9 @@ package com.anaraliev.smilemanager.guide
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.anaraliev.smilemanager.guide.customer.CustomerFragment
-import com.anaraliev.smilemanager.guide.doctor.DoctorFragment
-import com.anaraliev.smilemanager.guide.tasks.TasksFragment
+import com.anaraliev.smilemanager.customer.CustomerFragment
+import com.anaraliev.smilemanager.doctor.DoctorFragment
+import com.anaraliev.smilemanager.tasks.TasksFragment
 
 class GuidePagerAdapter(
     fragment: Fragment

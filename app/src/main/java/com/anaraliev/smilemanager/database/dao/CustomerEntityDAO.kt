@@ -15,7 +15,7 @@ interface CustomerEntityDAO {
     fun delete(customerEntity: CustomerEntity)
 
     @Insert
-    fun insert(customerEntity: CustomerEntity)
+    suspend fun insert(customerEntity: CustomerEntity)
 
     @Query("SELECT * FROM CustomerEntity")
     fun getAllCustomers(): Flow<List<CustomerEntity>>
