@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.anaraliev.smilemanager.database.entity.CustomerEntity
 import com.anaraliev.smilemanager.R
+import com.anaraliev.smilemanager.database.entity.CustomerEntity
 
 
 class CustomerAdapter : ListAdapter<CustomerEntity, CustomerViewHolder>(DiffCallback()) {
@@ -38,7 +38,8 @@ class CustomerAdapter : ListAdapter<CustomerEntity, CustomerViewHolder>(DiffCall
 
 class CustomerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val customerName: TextView = itemView.findViewById(R.id.customer_name)
-    private val contactNumberComments: TextView = itemView.findViewById(R.id.contact_number_comments)
+    private val contactNumberComments: TextView =
+        itemView.findViewById(R.id.contact_number_comments)
     private val address: TextView = itemView.findViewById(R.id.address)
     private val email: TextView = itemView.findViewById(R.id.email)
     private val percentage: TextView = itemView.findViewById(R.id.percentage)
@@ -48,6 +49,9 @@ class CustomerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         contactNumberComments.text = customer.contactNumberComments ?: "N/A"
         address.text = customer.address ?: "N/A"
         email.text = customer.email ?: "N/A"
-        percentage.text = customer.percentage ?: "N/A"
+        percentage.text = when {
+            customer.percentage != null -> "${customer.percentage}%"
+            else -> "N/A"
+        }
     }
 }

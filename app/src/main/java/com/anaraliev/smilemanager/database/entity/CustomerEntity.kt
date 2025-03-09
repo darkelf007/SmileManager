@@ -23,5 +23,5 @@ data class CustomerEntity(
     val email: String? = null,
 
     @ColumnInfo(name = "percentage")
-    val percentage: String? = null
+    val percentage: Int? = null
     )

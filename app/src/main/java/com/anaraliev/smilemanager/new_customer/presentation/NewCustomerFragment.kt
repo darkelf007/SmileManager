@@ -42,24 +42,35 @@ class NewCustomerFragment : Fragment() {
 
     private fun saveCustomer() {
         val name = binding.editTextCustomer.text.toString().trim()
-
-        if (name.isNotEmpty()) {
-            viewModel.addCustomer(name)
-            findNavController().navigateUp()
-        } else {
-            binding.editTextCustomer.error = "Введите заказчика"
+        val contactInfo = binding.editTextContactInfo.text.toString().trim()
+        val address = binding.editTextDeliveryInfo.text.toString().trim()
+        val email = binding.editTextEmail.text.toString().trim()
+        val percentageText = binding.editTextPercentage.text?.toString()?.trim() ?: ""
+        
+        if (percentageText.isEmpty()) {
+            binding.editTextPercentage.error = "Введите процент"
+            return
         }
-    }
 
-    private fun saveComments() {
-        val name = binding.editTextCustomer.text.toString().trim()
-
-        if (name.isNotEmpty()) {
-            viewModel.addCustomer(name)
-            findNavController().navigateUp()
-        } else {
-            binding.editTextCustomer.error = "Введите заказчика"
+        val percentage = try {
+            percentageText.toInt()
+        } catch (e: NumberFormatException) {
+            binding.editTextPercentage.error = "Некорректное число"
+            return
         }
+
+        if (percentage !in 0..100) {
+            binding.editTextPercentage.error = "Должно быть от 0 до 100"
+            return
+        }
+
+        if (name.isEmpty()) {
+            binding.editTextCustomer.error = "Введите заказчика"
+            return
+        }
+
+        viewModel.addCustomer(name,contactInfo,address,email,percentage)
+        findNavController().navigateUp()
     }
 
     override fun onDestroyView() {

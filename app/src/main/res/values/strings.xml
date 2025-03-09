@@ -6,6 +6,17 @@
     <string name="guide">Справочник</string>
     <string name="settings">Настройки</string>
     <string name="order">Наряды</string>
+    <string name="back">Назад</string>
+    <string name="customer">Заказчик</string>
+    <string name="contact_info_comments">Контактные данные \n/Комментарий:</string>
+    <string name="ok">Ок</string>
+    <string name="cancel">Отмена</string>
+    <string name="percentage">0-100%</string>
+    <string name="individual_percentage_of_the_surcharge_discounts">Индивидуальный процент надбавки/Скидки</string>
+    <string name="e_mail">E-mail</string>
+    <string name="delivery_info">Информация для доставки(адрес, телефон и т.д)</string>
+    <string name="address">Адрес</string>
+    <string name="info">Инфо</string>
     <!--    Наряды-->
 
 </resources>

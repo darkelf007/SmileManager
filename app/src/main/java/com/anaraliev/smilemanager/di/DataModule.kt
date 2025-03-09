@@ -10,7 +10,6 @@ import org.koin.dsl.module
   val dataModule = module {
         single<NewCustomerRepository> { NewCustomerRepositoryImpl(get()) }
         single<CustomerRepository> { CustomerRepositoryImpl(get()) }
-
 }
 
 

@@ -21,7 +21,6 @@ class CustomerFragment : Fragment() {
     private lateinit var customerRecyclerView: RecyclerView
     private lateinit var customerAdapter: CustomerAdapter
 
-    // Используйте Koin для внедрения зависимости CustomerViewModel
     private val viewModel: CustomerViewModel by viewModel()
 
     override fun onCreateView(
@@ -34,26 +33,21 @@ class CustomerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Инициализация RecyclerView
         customerRecyclerView = view.findViewById(R.id.recyclerview_customer)
         customerAdapter = CustomerAdapter()
         customerRecyclerView.layoutManager = LinearLayoutManager(context)
         customerRecyclerView.adapter = customerAdapter
 
-        // Подписка на изменения списка клиентов
         viewModel.customers.collectFlow {
             customerAdapter.submitList(it)
         }
 
-        // Обработчик кнопки "Добавить клиента"
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_customer)
         buttonNewCustomer.setOnClickListener {
-            // Откройте диалог для добавления нового клиента
             requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_NEW_CUSTOMER, Bundle())
         }
     }
 
-    // Расширение для удобной подписки на Flow
     private inline fun <T> Flow<T>.collectFlow(crossinline action: (T) -> Unit) {
         viewLifecycleOwner.lifecycleScope.launch {
             collect {

@@ -9,9 +9,10 @@ class NewCustomerViewModel(
     private val addNewCustomerUseCase: AddNewCustomerUseCase
 ) : ViewModel() {
 
-    fun addCustomer(name: String) {
+    fun addCustomer(name: String,contactInfo: String?, address: String?, email: String?, percentage: Int?) {
         viewModelScope.launch {
-            addNewCustomerUseCase.invoke(name)
+            addNewCustomerUseCase.invoke(name,contactInfo,address,email,percentage)
         }
     }
+
 }
