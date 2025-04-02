@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_date">
 
         <TextView
-            android:id="@+id/textView_customer"
+            android:id="@+id/textView_new_doctor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Заказчик" />

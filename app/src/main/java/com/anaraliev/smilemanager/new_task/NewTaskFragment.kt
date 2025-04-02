@@ -27,9 +27,9 @@ class NewTaskFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.backButton.setOnClickListener {
-            findNavController().navigateUp()
-        }
+//        binding.backButton.setOnClickListener {
+//            findNavController().navigateUp()
+//        }
     }
 
     override fun onDestroyView() {

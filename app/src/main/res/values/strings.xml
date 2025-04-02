@@ -19,4 +19,10 @@
     <string name="info">Инфо</string>
     <!--    Наряды-->
 
+    <!--    new_doctor-->
+    <string name="full_name">ФИО</string>
+    <string name="clinic_name">Название клиники</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="main_price_list">Основной прайс</string>
+
 </resources>
