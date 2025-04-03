@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     tools:context=".new_customer.presentation.NewCustomerFragment">
 
 
@@ -19,6 +20,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/fragment_task_drawer" />
+        app:headerLayout="@layout/custom_nav_header"  />
 
 </androidx.drawerlayout.widget.DrawerLayout>

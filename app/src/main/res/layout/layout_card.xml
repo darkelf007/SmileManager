@@ -5,9 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingVertical="@dimen/dp_8"
-    android:background="?attr/selectableItemBackground"> <!-- Добавляем ripple-эффект для кликабельности -->
+    android:background="?attr/selectableItemBackground">
 
-    <!-- Столбец 1: ID -->
     <TextView
         android:id="@+id/ID"
         android:layout_width="0dp"
@@ -26,7 +25,6 @@
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <!-- Столбец 2: Дата -->
     <TextView
         android:id="@+id/date"
         android:layout_width="0dp"
@@ -39,7 +37,6 @@
         android:textSize="@dimen/text_size_11"
         tools:text="2023-10-01" />
 
-    <!-- Разделитель -->
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
@@ -58,13 +55,11 @@
         android:textSize="@dimen/text_size_11"
         tools:text="Заказ #123" />
 
-    <!-- Разделитель -->
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <!-- Столбец 4: Дантист -->
     <TextView
         android:id="@+id/dentist"
         android:layout_width="0dp"
@@ -77,13 +72,11 @@
         android:textSize="@dimen/text_size_11"
         tools:text="Иванов И." />
 
-    <!-- Разделитель -->
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <!-- Столбец 5: Пациент -->
     <TextView
         android:id="@+id/patience"
         android:layout_width="0dp"
@@ -96,13 +89,11 @@
         android:textSize="@dimen/text_size_11"
         tools:text="Петров П." />
 
-    <!-- Разделитель -->
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <!-- Столбец 6: Срок действия -->
     <TextView
         android:id="@+id/date_expiration"
         android:layout_width="0dp"
