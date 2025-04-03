@@ -13,4 +13,6 @@ val databaseModule = module {
     }
 
     single { get<AppDatabase>().customerEntityDAO() }
+    single { get<AppDatabase>().basePriceDao() }
+    single { get<AppDatabase>().customerPriceDao() }
 }

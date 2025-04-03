@@ -7,10 +7,17 @@
 
     <!-- Header -->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_base_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Базовый прайс" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
 
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
