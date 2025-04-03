@@ -3,93 +3,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
     android:orientation="horizontal"
-    android:paddingVertical="@dimen/dp_8"
-    android:background="?attr/selectableItemBackground">
+    android:paddingVertical="@dimen/dp_8">
 
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <TextView
-        android:id="@+id/customer_name"
+    <EditText
+        android:id="@+id/order_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center"
         android:ellipsize="end"
+        android:gravity="center"
         android:maxLines="1"
         android:textColor="@color/dark_grey"
         android:textSize="@dimen/text_size_11"
-        tools:text="customer_name" />
+        tools:text="Работа" />
 
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <TextView
-        android:id="@+id/contact_number_comments"
+    <EditText
+        android:id="@+id/cost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center"
         android:ellipsize="end"
+        android:gravity="center"
         android:maxLines="1"
         android:textColor="@color/dark_grey"
         android:textSize="@dimen/text_size_11"
-        tools:text="contact_number_comments" />
+        tools:text="Стоимость работы" />
 
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@color/grey" />
 
-    <TextView
-        android:id="@+id/address"
+    <EditText
+        android:id="@+id/base_cost"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center"
+        android:autofillHints="000"
         android:ellipsize="end"
+        android:gravity="center"
         android:maxLines="1"
         android:textColor="@color/dark_grey"
-        android:textSize="@dimen/text_size_11"
-        tools:text="address" />
-
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="@color/grey" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textColor="@color/dark_grey"
-        android:textSize="@dimen/text_size_11"
-        tools:text="email" />
-
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="@color/grey" />
-
-    <TextView
-        android:id="@+id/percentage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textColor="@color/dark_grey"
-        android:textSize="@dimen/text_size_11"
-        tools:text="percentage" />
+        android:textSize="@dimen/text_size_11" />
 
 </LinearLayout>

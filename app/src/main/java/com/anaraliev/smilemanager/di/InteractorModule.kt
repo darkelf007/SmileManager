@@ -7,6 +7,7 @@ import com.anaraliev.smilemanager.new_customer.domain.AddNewCustomerUseCase
 import com.anaraliev.smilemanager.main.domain.MainInteractor
 import com.anaraliev.smilemanager.main.domain.MainUseCase
 import com.anaraliev.smilemanager.new_customer.data.AddNewCustomerUseCaseImpl
+import com.anaraliev.smilemanager.new_task.domain.NewTaskGetCustomersUseCase
 import org.koin.dsl.module
 
 val interactorModule = module {
@@ -19,5 +20,5 @@ val interactorModule = module {
     single<AddNewCustomerUseCase> {
         AddNewCustomerUseCaseImpl(get())
     }
-
+    factory { NewTaskGetCustomersUseCase(get()) }
 }
