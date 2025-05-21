@@ -5,18 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.bundle.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.anaraliev.smilemanager.R
+import com.anaraliev.smilemanager.database.entity.CustomerEntity
+import com.anaraliev.smilemanager.utils.BUNDLE_KEY_CUSTOMER_ID
+import com.anaraliev.smilemanager.utils.REQUEST_KEY_EDIT_CUSTOMER
 import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_CUSTOMER
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CustomerFragment : Fragment() {
+class CustomerFragment : Fragment(), OnCustomerClickListener { // Implement the listener
 
     private lateinit var customerRecyclerView: RecyclerView
     private lateinit var customerAdapter: CustomerAdapter
@@ -34,7 +38,7 @@ class CustomerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         customerRecyclerView = view.findViewById(R.id.recyclerview_customer)
-        customerAdapter = CustomerAdapter()
+        customerAdapter = CustomerAdapter(this) // Pass this fragment as the listener
         customerRecyclerView.layoutManager = LinearLayoutManager(context)
         customerRecyclerView.adapter = customerAdapter
 
@@ -44,8 +48,17 @@ class CustomerFragment : Fragment() {
 
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_customer)
         buttonNewCustomer.setOnClickListener {
+            // This remains for creating a new customer
             requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_NEW_CUSTOMER, Bundle())
         }
+    }
+
+    // Implementation of OnCustomerClickListener
+    override fun onCustomerClick(customer: CustomerEntity) {
+        // Prepare a bundle with the customer's ID (or any other data you need)
+        val bundle = bundleOf(BUNDLE_KEY_CUSTOMER_ID to customer.uid) // customer.uid is likely a Long
+        // Send the result to the parent fragment (GuideFragment)
+        requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_EDIT_CUSTOMER, bundle)
     }
 
     private inline fun <T> Flow<T>.collectFlow(crossinline action: (T) -> Unit) {

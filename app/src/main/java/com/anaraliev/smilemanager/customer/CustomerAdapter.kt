@@ -10,8 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anaraliev.smilemanager.R
 import com.anaraliev.smilemanager.database.entity.CustomerEntity
 
+// Define a click listener interface
+interface OnCustomerClickListener {
+    fun onCustomerClick(customer: CustomerEntity)
+}
 
-class CustomerAdapter : ListAdapter<CustomerEntity, CustomerViewHolder>(DiffCallback()) {
+class CustomerAdapter(private val listener: OnCustomerClickListener) : // Pass listener in constructor
+    ListAdapter<CustomerEntity, CustomerViewHolder>(DiffCallback()) {
 
     private class DiffCallback : DiffUtil.ItemCallback<CustomerEntity>() {
         override fun areItemsTheSame(oldItem: CustomerEntity, newItem: CustomerEntity): Boolean {
@@ -26,7 +31,7 @@ class CustomerAdapter : ListAdapter<CustomerEntity, CustomerViewHolder>(DiffCall
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomerViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.layout_customer_card, parent, false)
-        return CustomerViewHolder(view)
+        return CustomerViewHolder(view, listener) // Pass listener to ViewHolder
     }
 
 
@@ -36,7 +41,10 @@ class CustomerAdapter : ListAdapter<CustomerEntity, CustomerViewHolder>(DiffCall
     }
 }
 
-class CustomerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class CustomerViewHolder(
+    itemView: View,
+    private val listener: OnCustomerClickListener // Receive listener
+) : RecyclerView.ViewHolder(itemView) {
     private val customerName: TextView = itemView.findViewById(R.id.customer_name)
     private val contactNumberComments: TextView =
         itemView.findViewById(R.id.contact_number_comments)
@@ -44,7 +52,18 @@ class CustomerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val email: TextView = itemView.findViewById(R.id.email)
     private val percentage: TextView = itemView.findViewById(R.id.percentage)
 
+    private var currentCustomer: CustomerEntity? = null
+
+    init {
+        itemView.setOnClickListener {
+            currentCustomer?.let { customer ->
+                listener.onCustomerClick(customer) // Trigger listener on item click
+            }
+        }
+    }
+
     fun bind(customer: CustomerEntity) {
+        currentCustomer = customer // Store current customer
         customerName.text = customer.customerName
         contactNumberComments.text = customer.contactNumberComments ?: "N/A"
         address.text = customer.address ?: "N/A"

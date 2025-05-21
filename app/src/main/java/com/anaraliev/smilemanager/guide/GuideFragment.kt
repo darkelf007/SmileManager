@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.anaraliev.smilemanager.R
 import com.anaraliev.smilemanager.databinding.FragmentGuideBinding
+import com.anaraliev.smilemanager.utils.REQUEST_KEY_EDIT_CUSTOMER
 import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_CUSTOMER
 import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_DOCTOR
 import com.anaraliev.smilemanager.utils.REQUEST_KEY_NEW_TASK
@@ -30,6 +31,11 @@ class GuideFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        childFragmentManager.setFragmentResultListener(REQUEST_KEY_EDIT_CUSTOMER, this) { _, _ ->
+            val navController = requireActivity().findNavController(R.id.nav_host_fragment)
+            navController.navigate(R.id.action_guideFragment_to_newCustomerFragment)
+        }
 
         childFragmentManager.setFragmentResultListener(REQUEST_KEY_NEW_CUSTOMER, this) { _, _ ->
             val navController = requireActivity().findNavController(R.id.nav_host_fragment)

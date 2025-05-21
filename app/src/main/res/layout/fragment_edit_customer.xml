@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edit_customer.EditCustomerFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_weight="1"
+            android:text="@string/customer"
+            android:textSize="@dimen/text_size_22" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_nav_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E8EB"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout_body_customer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_body_customer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_header">
+
+        <TextView
+            android:id="@+id/textView_customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/customer"
+            android:textSize="@dimen/text_size_22" />
+
+        <EditText
+            android:id="@+id/editText_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_nav_separator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E8EB"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout_body_contact_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_body_contact_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_body_customer">
+
+        <TextView
+            android:id="@+id/textView_contact_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:maxLines="@android:integer/config_longAnimTime"
+            android:text="@string/contact_info_comments"
+            android:textSize="@dimen/text_size_18" />
+
+        <EditText
+            android:id="@+id/editText_contact_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_nav_separator3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E8EB"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout_body_delivery_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_body_delivery_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_body_contact_info">
+
+        <TextView
+            android:id="@+id/textView_delivery_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:text="@string/delivery_info"
+            android:textSize="@dimen/text_size_18" />
+
+        <EditText
+            android:id="@+id/editText_delivery_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_nav_separator4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E8EB"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_body_delivery_info">
+
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/e_mail"
+            android:textSize="@dimen/text_size_22" />
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:inputType="text"
+            tools:ignore="TextFields" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_nav_separator5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E8EB"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout_percentage_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_percentage_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_email">
+
+        <TextView
+            android:id="@+id/textView_percentage_discounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:text="@string/individual_percentage_of_the_surcharge_discounts"
+            android:textSize="@dimen/text_size_22" />
+
+
+        <EditText
+            android:id="@+id/editText_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:digits="-0123456789"
+            android:ems="10"
+            android:hint="@string/percentage"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="44dp"
+        android:text="button_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
