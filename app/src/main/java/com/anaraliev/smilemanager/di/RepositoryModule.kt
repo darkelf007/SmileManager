@@ -20,4 +20,5 @@ val repositoryModule = module {
     single<NewTaskCustomerRepository> { NewTaskCustomerRepositoryImpl(get()) }
     single<BasePriceRepository> { BasePriceRepositoryImpl(get()) }
     single<CustomerPriceRepository> { CustomerPriceRepositoryImpl(get()) }
+    single<CustomerRepository> { CustomerRepositoryImpl(get()) }
 }

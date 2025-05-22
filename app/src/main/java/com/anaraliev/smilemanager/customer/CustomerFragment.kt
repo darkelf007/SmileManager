@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CustomerFragment : Fragment(), OnCustomerClickListener { // Implement the listener
+class CustomerFragment : Fragment(), OnCustomerClickListener {
 
     private lateinit var customerRecyclerView: RecyclerView
     private lateinit var customerAdapter: CustomerAdapter
@@ -38,7 +38,7 @@ class CustomerFragment : Fragment(), OnCustomerClickListener { // Implement the 
         super.onViewCreated(view, savedInstanceState)
 
         customerRecyclerView = view.findViewById(R.id.recyclerview_customer)
-        customerAdapter = CustomerAdapter(this) // Pass this fragment as the listener
+        customerAdapter = CustomerAdapter(this)
         customerRecyclerView.layoutManager = LinearLayoutManager(context)
         customerRecyclerView.adapter = customerAdapter
 
@@ -48,16 +48,13 @@ class CustomerFragment : Fragment(), OnCustomerClickListener { // Implement the 
 
         val buttonNewCustomer = view.findViewById<Button>(R.id.button_new_customer)
         buttonNewCustomer.setOnClickListener {
-            // This remains for creating a new customer
             requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_NEW_CUSTOMER, Bundle())
         }
     }
 
-    // Implementation of OnCustomerClickListener
     override fun onCustomerClick(customer: CustomerEntity) {
-        // Prepare a bundle with the customer's ID (or any other data you need)
-        val bundle = bundleOf(BUNDLE_KEY_CUSTOMER_ID to customer.uid) // customer.uid is likely a Long
-        // Send the result to the parent fragment (GuideFragment)
+
+        val bundle = bundleOf(BUNDLE_KEY_CUSTOMER_ID to customer.uid)
         requireParentFragment().childFragmentManager.setFragmentResult(REQUEST_KEY_EDIT_CUSTOMER, bundle)
     }
 

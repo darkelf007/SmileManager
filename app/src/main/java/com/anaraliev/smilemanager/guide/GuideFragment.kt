@@ -1,7 +1,6 @@
 package com.anaraliev.smilemanager.guide
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,9 +31,9 @@ class GuideFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        childFragmentManager.setFragmentResultListener(REQUEST_KEY_EDIT_CUSTOMER, this) { _, _ ->
+        childFragmentManager.setFragmentResultListener(REQUEST_KEY_EDIT_CUSTOMER, this) { _, bundle  ->
             val navController = requireActivity().findNavController(R.id.nav_host_fragment)
-            navController.navigate(R.id.action_guideFragment_to_newCustomerFragment)
+            navController.navigate(R.id.action_guideFragment_to_editCustomerFragment, bundle)
         }
 
         childFragmentManager.setFragmentResultListener(REQUEST_KEY_NEW_CUSTOMER, this) { _, _ ->

@@ -2,6 +2,7 @@ package com.anaraliev.smilemanager.di
 
 
 import com.anaraliev.smilemanager.customer.CustomerViewModel
+import com.anaraliev.smilemanager.edit_customer.EditCustomerViewModel
 import com.anaraliev.smilemanager.new_customer.presentation.NewCustomerViewModel
 import com.anaraliev.smilemanager.main.MainViewModel
 import com.anaraliev.smilemanager.new_task.NewTaskViewModel
@@ -28,5 +29,5 @@ val viewModelModule = module {
             saveCustomerPricesUseCase = get<SaveCustomerPricesUseCase>()
         )
     }
-
+    viewModel { EditCustomerViewModel(get(), get()) }
 }

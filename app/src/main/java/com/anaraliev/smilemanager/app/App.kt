@@ -2,7 +2,6 @@ package com.anaraliev.smilemanager.app
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
-import com.anaraliev.smilemanager.di.dataModule
 import com.anaraliev.smilemanager.di.databaseModule
 import com.anaraliev.smilemanager.di.interactorModule
 import com.anaraliev.smilemanager.di.repositoryModule
@@ -20,7 +19,7 @@ class App : Application() {
         startKoin {
             androidLogger(Level.INFO)
             androidContext(this@App)
-            modules(interactorModule, viewModelModule, databaseModule,repositoryModule,  dataModule)
+            modules(interactorModule, viewModelModule, databaseModule,repositoryModule)
         }
     }
 }
