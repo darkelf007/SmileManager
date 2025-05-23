@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.anaraliev.smilemanager.database.entity.CustomerEntity
+import com.anaraliev.smilemanager.edit_customer.domain.EditCustomerUseCase
 import com.anaraliev.smilemanager.edit_customer.domain.GetCustomerByIdUseCase
 import com.anaraliev.smilemanager.edit_customer.domain.UpdateCustomerUseCase
 import kotlinx.coroutines.launch
@@ -56,5 +57,9 @@ class EditCustomerViewModel(
                 _updateResult.value = Result.failure(e)
             }
         }
+    }
+
+    suspend fun deleteCustomer(customerEntity: CustomerEntity) {
+        EditCustomerUseCase.deleteCustomer(customerEntity)
     }
 }

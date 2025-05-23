@@ -15,7 +15,5 @@ class CustomerViewModel(
         customerUseCase.insertCustomer(customerEntity)
     }
 
-    suspend fun deleteCustomer(customerEntity: CustomerEntity) {
-        customerUseCase.deleteCustomer(customerEntity)
-    }
+
 }

@@ -5,6 +5,4 @@ import kotlinx.coroutines.flow.Flow
 
 interface CustomerUseCase {
     fun getAllCustomers(): Flow<List<CustomerEntity>>
-    suspend fun insertCustomer(customerEntity: CustomerEntity)
-    suspend fun deleteCustomer(customerEntity: CustomerEntity)
 }

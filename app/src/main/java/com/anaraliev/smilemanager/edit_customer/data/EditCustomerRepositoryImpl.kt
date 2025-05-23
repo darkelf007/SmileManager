@@ -13,5 +13,9 @@ class EditCustomerRepositoryImpl(private val customerDao: CustomerEntityDAO) : E
     override suspend fun getCustomerById(id: Int): CustomerEntity? {
         return customerDao.getCustomerById(id)
     }
+
+    override suspend fun deleteCustomer(customerEntity: CustomerEntity) {
+        customerDao.delete(customerEntity)
+    }
 }
 

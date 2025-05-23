@@ -7,12 +7,4 @@ import kotlinx.coroutines.flow.Flow
 
 class CustomerRepositoryImpl(private val customerDao: CustomerEntityDAO) : CustomerRepository {
     override fun getAllCustomers(): Flow<List<CustomerEntity>> = customerDao.getAllCustomers()
-
-    override suspend fun insertCustomer(customerEntity: CustomerEntity) {
-        customerDao.insert(customerEntity)
-    }
-
-    override suspend fun deleteCustomer(customerEntity: CustomerEntity) {
-        customerDao.delete(customerEntity)
-    }
 }
